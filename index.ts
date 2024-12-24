@@ -3,8 +3,11 @@ import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import 'colors';
 import dotenv from 'dotenv';
+import { connectDB, AuthRouter } from './src/helpers/path';
 
 dotenv.config();
+
+connectDB(); // Connect our database
 
 let app = express();
 
@@ -18,6 +21,8 @@ let limit = rateLimit({
 });
 
 app.use(limit);
+
+app.use('/api/v1/auth', AuthRouter);
 
 let PORT = process.env.PORt || 8000;
 
