@@ -29,7 +29,7 @@ Before running this project, ensure you have the following installed:
 ```bash
 git clone https://github.com/Balaji6245/terralogic_task
 
-cd terralogic_task
+cd E-Book
 
 npm install
 
