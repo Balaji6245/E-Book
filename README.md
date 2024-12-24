@@ -102,7 +102,7 @@ Paste your JWT token into the Token field.
 Example
 If you're using Postman, your request headers should include:
 
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer your-jwt-token
 
 Create book:
 
