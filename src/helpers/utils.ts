@@ -4,7 +4,7 @@ class utilsClass {
     constructor() { }
 
     generateJwt = (id: any) => {
-        return jwt.sign({ id: id }, process.env.SECRET_KEY!, { expiresIn: process.env.EXPIRATION_TIME });
+        return jwt.sign({ id: id }, process.env.SECRET_KEY!);
     }
 
     encryptPass = (password: string) => {
