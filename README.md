@@ -1,4 +1,4 @@
-# terralogic_task
+# E-Book
 
 CRUD Application for E-Book
 
@@ -130,7 +130,7 @@ http://localhost:{PORT}/api/v1/books/ (GET)
 
 Update book:
 
-http://localhost:{PORT}/api/v1/books/{bookId} (PATCH)
+http://localhost:{PORT}/api/v1/books/{bookId} (PUT)
 
 Delete book:
 
