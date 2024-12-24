@@ -1,6 +1,7 @@
-import { Schema, Document, model, ObjectId, mongoose } from "../helpers/path";
+import { Schema, Document, model, ObjectId, mongoose, Enum } from "../helpers/path";
 
 const requiredString = { type: String, required: true }
+const requiredNumber = { type: Number, required: true }
 
 const options = {
     timestamps: true,
@@ -10,16 +11,21 @@ const options = {
 interface IBooks extends Document {
     author: ObjectId,
     title: string,
-    published_on: Date
+    description: string,
+    price: number,
+    isbn: number,
+    published_on: Date,
+    active: number
 }
 
 const bookSchema = new Schema<IBooks>({
-    author: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'users'
-    },
+    author: requiredString,
     title: requiredString,
-    published_on: Date
+    description: String,
+    price: requiredNumber,
+    isbn: Number,
+    published_on: Date,
+    active: { type: Number, default: Enum.STATUS.ACTIVE }
 }, options);
 
 export const BookModel = model<IBooks>('book', bookSchema);

@@ -1,6 +1,8 @@
 let commonMsg = {
     validField: "Please enter required field",
-    invalidCre: "Invalid credentials"
+    invalidCre: "Invalid credentials",
+    noAuthAcc: "Not authorized to access this route",
+    tokenExp: "Login token expired",
 }
 
 let userMsg = {
@@ -11,4 +13,18 @@ let userMsg = {
     passUpdated404: "Unable to reset password",
 }
 
-export { commonMsg, userMsg }
+let bookMsg = {
+    created: "Book created",
+    created404: "Unable to create book",
+    book: "Book",
+    book404: "Book not found",
+    books: "Books",
+    books404: "Books not found",
+    bookExsist: "This book already exsist",
+    updateBook: "Book updated",
+    updateBook404: "Could not update book",
+    deleteBook: "Book deleted",
+    deleteBook404: "Could not delete book"
+}
+
+export { commonMsg, userMsg, bookMsg }
