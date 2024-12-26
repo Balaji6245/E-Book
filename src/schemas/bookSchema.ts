@@ -9,7 +9,7 @@ const options = {
 }
 
 interface IBooks extends Document {
-    author: ObjectId,
+    author: string,
     title: string,
     description: string,
     price: number,
